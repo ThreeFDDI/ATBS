@@ -11,8 +11,6 @@ def collatz(num):
 
 num = input("Please pick a number to run the Collatz swquence against:\n")
 
-#print(num)
-
 try:
     num = int(num)
 
