@@ -8,7 +8,6 @@ def collatz(num):
     print(num)
     return num
 
-
 num = input("Please pick a number to run the Collatz swquence against:\n")
 
 try:
@@ -19,5 +18,3 @@ try:
 
 except ValueError:
     print("You did not enter a number.\n")
-
-
