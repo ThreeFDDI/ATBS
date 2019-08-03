@@ -6,10 +6,20 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
 
-tableWidth = 0
+# function to format and print
+def printTable(list):
+    # initialize list of column width
+    colWidth = [0]*len(tableData[0])
 
-for i in tableData:
-    if len(i) > tableWidth:
-        tableWidth = i
+    # determine longest width per column
+    for i in range(len(tableData)):
+        #if len(i) > colWidth[i]:
+         #   print(i)
+        #colWidth.append(len(i))
+        print(tableData[i])
+        print(colWidth)
+        print()    
+        
 
-print(tableWidth)
+
+printTable(tableData)
