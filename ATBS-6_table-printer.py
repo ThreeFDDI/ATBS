@@ -6,3 +6,10 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
 
+tableWidth = 0
+
+for i in tableData:
+    if len(i) > tableWidth:
+        tableWidth = i
+
+print(tableWidth)

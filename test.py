@@ -7,4 +7,3 @@ def myfunction(mylist1):
 mylist2=[2,3]
 myfunction (mylist2)
 print(mylist2)
-print(mylist1)
