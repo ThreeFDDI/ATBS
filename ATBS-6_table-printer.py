@@ -2,9 +2,10 @@
 
 # ATBS-6_table-printer.py prints formatted tables from lists
 
-tableData = [['apples', 'oranges', 'cherries', 'banana'],
-             ['Alice', 'Bob', 'Carol', 'David'],
-             ['dogs', 'cats', 'moose', 'goose']]
+tableData = [['apples', 'oranges', 'cherries', 'banana','pears'],
+             ['Alice', 'Bob', 'Carol', 'David', 'Tim'],
+             ['dogs', 'lion', 'moose', 'goose', 'turtle'],
+             ['pen', 'pencil', 'marker', 'crayon','highligher']]
 
 # function to format and print
 def printTable(list):
@@ -12,14 +13,18 @@ def printTable(list):
     colWidth = [0]*len(tableData[0])
 
     # determine longest width per column
-    for i in range(len(tableData)):
-        #if len(i) > colWidth[i]:
-         #   print(i)
-        #colWidth.append(len(i))
-        print(tableData[i])
-        print(colWidth)
-        print()    
-        
+    for row in range(len(tableData)):
+        for column in range(len(tableData[row])):
+            if len((tableData[row][column])) > colWidth[column]:
+                colWidth[column] = (len((tableData[row][column])))
 
-
+    # print rows with right justifcation of longest column width
+    for row in range(len(tableData)):
+        for column in range(len(tableData[row])):
+            print(tableData[row][column].rjust(colWidth[column] + 1), end = "")
+        print()
+     
 printTable(tableData)
+
+
+
