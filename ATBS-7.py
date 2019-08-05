@@ -39,3 +39,14 @@ print(mo4.group())
 
 mo4 = batRegex.search("The Adventures of Batwoman.")
 print(mo4.group())
+
+xmasRegex = re.compile(r'\d+\s\w+')
+xmas = xmasRegex = xmasRegex.findall('12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge')
+print(xmas)
+
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+print("Vowels: {}".format(vowelRegex.findall('Robocop eats baby food. BABY FOOD.')))
+
+consonantRegex = re.compile(r'[^aeiouAEIOU]')
+print("Consonants: {}".format(consonantRegex.findall('Robocop eats baby food. BABY FOOD.')))
+
