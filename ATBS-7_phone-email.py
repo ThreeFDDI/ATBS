@@ -43,9 +43,20 @@ for groups in phoneRegex.findall(text):
 for groups in emailRegex.findall(text):
     matches.append(groups[0])
 
-# print matches and send to clipboard
+# check number of matches and error if none found
 if len(matches) > 0:
+    # convert from list to string
     matches_out = "\n".join(matches)
+    # sent string to clipboard
     pyperclip.copy(matches_out)
+    # print matches
     print("Copied to clipboard:")
     print(matches_out)
+
+# print error if no matches found
+else:
+    print("No phone numbers or email addresses found.")
+
+
+
+
