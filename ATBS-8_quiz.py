@@ -4,6 +4,7 @@
 
 import random, os
 
+# question and answer pool
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
    'Connecticut': 'Hartford', 'Delaware': 'Dover', 'Florida': 'Tallahassee',
@@ -22,7 +23,11 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia':
    'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
-# TODO: Create the quiz and answer key files.
+# generate 35 quiz files
+for quizNum in range(35):
+    quizFile = open("ATBS/ATBS-8_quizzes/capitalsquiz{}.txt".format(quizNum +1), "w")
+    #quizFile.write(str(quizNum + 1))
+    #quizFile.close()
 
 # TODO: Write out the header for the quiz.
 
