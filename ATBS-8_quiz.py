@@ -26,8 +26,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 # generate 35 quiz files
 for quizNum in range(35):
     quizFile = open("ATBS/ATBS-8_quizzes/capitalsquiz{}.txt".format(quizNum +1), "w")
-    #quizFile.write(str(quizNum + 1))
-    #quizFile.close()
+    quizFile.write(str(quizNum + 1))
+    quizFile.close()
 
 # TODO: Write out the header for the quiz.
 
