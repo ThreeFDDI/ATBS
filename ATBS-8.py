@@ -36,3 +36,5 @@ for file in os.listdir(path):
 print("Total size of all files: {}".format(totalSize))
 
 helloFile = open('hello.txt')
+
+print(helloFile.read())
