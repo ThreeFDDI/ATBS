@@ -42,6 +42,7 @@ for quizNum in range(35):
    for questionNum in range(50):
       # get right answer
       correctAnswer = capitals[states[questionNum]]
+      
       # copy list to get the wrong answers
       wrongAnswers = list(capitals.values())
       # delete the correct answer
@@ -53,8 +54,9 @@ for quizNum in range(35):
       # shuffle answer options
       random.shuffle(answerOptions)
 
-      # write question and answer options to the quiz file
+      # write question to the quiz file
       quizFile.write("{}. What is the capital of {}?\n".format(questionNum + 1, states[questionNum]))
+      # write answer options to the quiz file
       for i in range(4):
          quizFile.write(" {}. {}\n".format("ABCD"[i], answerOptions[i]))
 
