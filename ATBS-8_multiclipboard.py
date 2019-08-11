@@ -14,8 +14,14 @@ mcbShelf = shelve.open("mcb")
 if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
     print("Saving....")
     mcbShelf[sys.argv[2]] = pyperclip.paste()
+
+elif len(sys.arg) == 3 and sys.argv[1].lower() == 'delete':
+    pass # delete entry
+
+elif len(sys.arg) == 2 and sys.argv[1].lower() == 'delete':
+    pass # delete all entries
+
 elif len(sys.argv) == 2:
-    pass
     
     # list keywords and load content
     if sys.argv[1].lower() == "list":
