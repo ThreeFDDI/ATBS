@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-# multiclipboard saves and loads text to the clipboard
+# multiclipboard saves and loads text to and from the clipboard
 
 # Usage: py ATBS-8_multiclipboard.pyw save <keyword> saves clipboard to keyword
 # Usage: py ATBS-8_multiclipboard.pyw  <keyword> loads keyword to clipboard
@@ -8,6 +8,7 @@
 
 import shelve, pyperclip, sys
 
+# open mcb shelf file
 mcbShelf = shelve.open("mcb")
 
 # save clipboard contents to mcb shelf
@@ -30,6 +31,7 @@ elif len(sys.argv) == 2:
     if sys.argv[1].lower() == "list":
         print(str(list(mcbShelf.keys())))
         pyperclip.copy(str(list(mcbShelf.keys())))
+    # load entry into clipboard
     elif sys.argv[1] in mcbShelf:
         pyperclip.copy(mcbShelf[sys.argv[1]])
 
