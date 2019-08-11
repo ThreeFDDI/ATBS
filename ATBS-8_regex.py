@@ -8,10 +8,15 @@ path = "/Users/JT/JTGIT/ATBS/ATBS-8_regex_dir"
 # list files in directory
 files = os.listdir(path)
 
-#print(files)
-
+# loop through files
 for file in files:
-    if ".txt" in file: 
+    # find .txt files
+    if ".txt" in file:
+        # open and read file 
         with open(path + "/" + file) as file:
             data = file.read()
-            print(data)
+            # regex search to match lines containing "test"
+            matches = re.findall(".*test.*",data)
+            # print matches
+            for i in matches:
+                print(i)
