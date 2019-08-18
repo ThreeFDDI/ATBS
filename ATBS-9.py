@@ -8,4 +8,4 @@ os.chdir("/Users/JT/JTGIT/ATBS/")
 
 print(os.getcwd())
 
-# print(dir(os))
+print(dir(os))
