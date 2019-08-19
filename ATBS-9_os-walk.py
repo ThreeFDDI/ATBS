@@ -1,12 +1,12 @@
 #! /usr/local/bin/python3
 
-import shutil, os
+import os
 
-top_level = "/Users/JT/JTGIT/ACI"
+top_level = "/Users/JT/JTGIT/ATBS"
 
 for folderName, subfolders, filenames in os.walk(top_level):
 
-    if r"/." in folderName:
+    if r"/." in folderName or "quiz" in folderName:
         continue
 
     else:
