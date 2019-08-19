@@ -1,4 +1,4 @@
 #! /usr/local/bin/python3
 
-# mapit:
+# download ALL the xkcd
 
