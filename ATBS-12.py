@@ -17,3 +17,7 @@ print(type(sheet))
 #print(dir(sheet))
 
 print(sheet.title)
+
+anotherSheet = wb.active
+
+print(anotherSheet)
