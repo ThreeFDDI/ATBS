@@ -46,8 +46,10 @@ while not url.endswith("#"):
 
         # skip pages without a comic
         except requests.exceptions.MissingSchema:
+
             # get link for Prev button
             prevLink = soup.select('a[rel="prev"]')[0]
+            
             # set url to go to previous page
             url = "http://xkcd.com" + prevLink.get("href")
             continue
@@ -67,14 +69,7 @@ while not url.endswith("#"):
     
     # set url to go to previous page
     url = "http://xkcd.com" + prevLink.get("href")
-            
-
-
 
     continue
-
-
-
-
 
 print("Done.")
