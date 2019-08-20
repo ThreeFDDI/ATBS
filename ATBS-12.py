@@ -43,3 +43,11 @@ print(get_column_letter(27))
 print(get_column_letter(900))
 print(column_index_from_string('AA'))
 print(column_index_from_string('AHP'))
+
+print(tuple(anotherSheet["A1":"C3"]))
+
+print()
+for row in anotherSheet["A1":"C3"]:
+    for cell in row:
+        print(cell.coordinate, cell.value)
+    print("~~~ END OF ROW ~~~\n")
