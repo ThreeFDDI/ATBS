@@ -36,4 +36,4 @@ for row in range(2,sheet.max_row +1):
 
 # pretty print results
 pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(countyData)
+pp.pprint(countyData['TN'])
