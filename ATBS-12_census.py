@@ -1,32 +1,25 @@
 #! /usr/local/bin/python3
 
-import openpyxl, os
+# tabulate census data per county
+
+import openpyxl, pprint, os
 
 os.chdir("/Users/JT/JTGIT/ATBS")
 
-wb = openpyxl.load_workbook("ATBS-12_example.xlsx")
+print("Opening workbook...")
 
-sheet = wb.active
+wb = openpyxl.load_workbook("ATBS-12_censuspopdata.xlsx")
 
-col1 = sheet.iter_cols(values_only=False, min_col=2, max_col=2)
-print(col1)
-for col in col1:
-    for row in col:
-        print(row)
+sheet = wb["Population by Census Tract"]
 
-print("~"*20)
+countyData = {}
 
-col2 = sheet.iter_cols(values_only=False, min_col=2, max_col=2)
-print(col2)
-for col in col2:
-    for row in col:
-        print(row.value)
+# TODO poulate in countyData 
 
-print("~"*20)
+print("Reading rows...")
+for row in range(2,sheet.max_row +1):
+    state = sheet["B" + str(row)].value
+    county = sheet["C" + str(row)].value
+    pop = sheet["D" + str(row)].value
 
-col3 = sheet.iter_cols(values_only=True, min_col=2, max_col=2)
-print(col3)
-
-for col in col3:
-    for row in col:
-        print(row)
+    
