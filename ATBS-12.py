@@ -51,5 +51,3 @@ for row in anotherSheet["A1":"C7"]:
     for cell in row:
         print(cell.coordinate, cell.value)
     print("~~~ END OF ROW ~~~\n")
-
-
