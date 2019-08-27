@@ -30,3 +30,10 @@ for i in exData[5]:
     print(i)
 
 outputFile = open("ATBS/ATBS-14_output.csv", "w", newline="")
+
+outputWriter = csv.writer(outputFile)
+
+outputWriter.writerow(['spam', 'eggs', 'bacon', 'ham'])
+
+outputWriter.writerow([1, 2, 3.14, 4])
+
