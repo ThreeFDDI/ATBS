@@ -18,30 +18,23 @@ location = " ".join(sys.argv[1:])
 # api key for OpenWeather
 api_key = "d965d929c2790f6feec5ba493f9dd2f9"
 
-login = f"http://api.openweathermap.org/data/2.5/weather?q={location}&APPID={api_key}"
+# set URL for requests to use
+url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&APPID={api_key}"
 
-response = requests.post(login)
+# make HTTP POST using location and API key
+response = requests.post(url)
 
+# raise exception for HTTP status errors
 response.raise_for_status()
 
+# convert response to json
 weather = json.loads(response.text)
 
+#convert temp from Kelvin to Fahrenheit
+temp = round(1.8 * ((weather['main']['temp']) - 273) + 32,1)
+
+# print results
 print()
-
-pprint(weather)
-
-
-# download json from OpenWeatherMap.org's API
-#url = f'http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3'
-
-#response = requests.get(url)
-
-#response.raise_for_status()
-
-# TODO load json data into a Python variable
-
-
-
-
-#print(sys.argv[0])
-#print(location)
+print(f"Current weather in {weather['name']}: ")
+print(f"{weather['weather'][0]['main']} - {weather['weather'][0]['description']}")
+print(f"Temp - {temp}")
