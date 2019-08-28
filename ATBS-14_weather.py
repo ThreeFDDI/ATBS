@@ -18,14 +18,17 @@ location = " ".join(sys.argv[1:])
 # api key for OpenWeather
 api_key = "d965d929c2790f6feec5ba493f9dd2f9"
 
-login = f"http://api.openweathermap.org/data/2.5/weather?id=524901&APPID={api_key}"
+login = f"http://api.openweathermap.org/data/2.5/weather?q={location}&APPID={api_key}"
 
 response = requests.post(login)
 
+response.raise_for_status()
+
+weather = json.loads(response.text)
+
 print()
-print(response.status_code)
-print()
-pprint(response.text)
+
+pprint(weather)
 
 
 # download json from OpenWeatherMap.org's API
