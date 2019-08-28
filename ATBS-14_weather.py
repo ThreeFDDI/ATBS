@@ -5,28 +5,35 @@
 # ATBS-14_weather.py 
 
 import sys, json, requests
+from pprint import pprint
 
 # compute location from command line arg
 if len(sys.argv) < 2:
     print("Usage: ATBS-14_weather.py location")
     sys.exit()
-
+ 
 # set location variable
 location = " ".join(sys.argv[1:])
 
 # api key for OpenWeather
-api_key = "5a8391cbd98cd59ef3deaf941bd29098"
+api_key = "d965d929c2790f6feec5ba493f9dd2f9"
 
-login = f"http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={{api_key}}"
+login = f"http://api.openweathermap.org/data/2.5/weather?id=524901&APPID={api_key}"
 
-requests.post(login)
+response = requests.post(login)
+
+print()
+print(response.status_code)
+print()
+pprint(response.text)
+
 
 # download json from OpenWeatherMap.org's API
-url = f'http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3'
+#url = f'http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3'
 
-response = requests.get(url)
+#response = requests.get(url)
 
-response.raise_for_status()
+#response.raise_for_status()
 
 # TODO load json data into a Python variable
 
