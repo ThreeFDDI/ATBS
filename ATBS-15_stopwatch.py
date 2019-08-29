@@ -8,4 +8,12 @@ import time
 
 # display the program's instructions
 print("Press ENTER to begin. Afterwards, press ENTER to 'click' the stopwatch. \
-    Press Ctrl-C to quit")
+Press Ctrl-C to quit")
+
+# press ENTER to begin
+input()
+print("Started")
+
+startTime = time.time()
+lastTime = startTime
+lapNum = 1
