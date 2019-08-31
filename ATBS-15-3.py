@@ -4,9 +4,21 @@
 
 # ATBS-15-3.py 
 
-import time, datetime
+import time, datetime, threading
 
 startTime = datetime.datetime(2029, 10, 31)
-while datetime.datetime.now() < startTime:
-    print("SLEEP")
-    time.sleep(10)
+#while datetime.datetime.now() < startTime:
+#    print("\nNOT YET!!")
+#    time.sleep(10)
+
+def takeANap():
+    print("Sleep...")
+    time.sleep(5)
+    print("Wake up!!")
+
+threadObj = threading.Thread(target=takeANap)
+
+threadObj.start()
+
+
+print(type(threadObj))

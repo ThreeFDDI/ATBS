@@ -10,7 +10,7 @@ import datetime, time
 dt = datetime.datetime.now()
 
 # set vacation date
-vacation = datetime.datetime(2019, 11, 2)
+vacation = datetime.datetime(2019, 12, 2)
 
 # calculate delta between them
 delta = vacation -  dt
