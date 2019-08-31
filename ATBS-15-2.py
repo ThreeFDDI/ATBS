@@ -20,3 +20,25 @@ print()
 
 print(datetime.datetime.fromtimestamp(time.time()))
 print()
+
+delta =  datetime.timedelta(days=11, hours=10, minutes=9, seconds=8)
+
+print(delta.days, delta.seconds, delta.microseconds)
+print()
+print(delta.total_seconds())
+print()
+print(type(delta))
+print()
+print(delta)
+print()
+print(str(delta))
+print()
+
+dt = datetime.datetime.now()
+print(dt)
+thousandDays = datetime.timedelta(days=1000)
+print(dt + thousandDays)
+
+cruise = datetime.datetime(2019, 12, 2)
+
+print(dt - cruise)
