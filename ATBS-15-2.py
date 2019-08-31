@@ -38,7 +38,7 @@ dt = datetime.datetime.now()
 print(dt)
 thousandDays = datetime.timedelta(days=1000)
 print(dt + thousandDays)
+print()
 
-cruise = datetime.datetime(2019, 12, 2)
-
-print(dt - cruise)
+oct21st = datetime.datetime(2019, 10, 21, 16, 29, 0)
+print(oct21st.strftime('%Y/%m/%d %H:%M:%S'))
