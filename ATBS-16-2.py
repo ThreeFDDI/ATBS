@@ -4,4 +4,18 @@
 
 # ATBS-16-2.py 
 
-import email, smtplib, ssl
+from twilio.rest import Client
+
+accountSID =    ''
+
+authToken =     ''
+
+myNumber =      ''
+
+twilioNumber =  ''
+
+def textmyself(message):
+    twilioCli = Client(accountSID, authToken)
+    twilioCli.messages.create(body=message, from_=twilioNumber, to=myNumber)
+
+textmyself('Hey baby, Netflix and chill?')
