@@ -20,5 +20,8 @@ print(catIm.filename)
 print(catIm.format)
 print(catIm.format_description)
 catIm.save('ATBS/ATBS-17_zophie.jpg')
+print()
 
+newIm = Image.new('RGBA', (100,200), 'purple')
+newIm.save('ATBS/ATBS-17_purple.png')
 
