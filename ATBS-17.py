@@ -19,7 +19,7 @@ print(catIm.height)
 print(catIm.filename)
 print(catIm.format)
 print(catIm.format_description)
-catIm.save('ATBS/ATBS-17_zophie2.png')
+catIm.save('ATBS/ATBS-17_zophie4.png')
 
 
 
