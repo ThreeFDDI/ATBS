@@ -10,12 +10,12 @@ accountSID =    ''
 
 authToken =     ''
 
-myNumber =      ''
+myNumber =      '+1574514xxxx'
 
-twilioNumber =  ''
+twilioNumber =  '+1574707xxxx'
 
 def textmyself(message):
     twilioCli = Client(accountSID, authToken)
     twilioCli.messages.create(body=message, from_=twilioNumber, to=myNumber)
 
-textmyself('Hey baby, Netflix and chill?')
+textmyself('Hey... got any pony pics??')
