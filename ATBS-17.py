@@ -22,3 +22,5 @@ print(catIm.format_description)
 catIm.save('ATBS/ATBS-17_zophie.jpg')
 print()
 
+croppedIm = catIm.crop((335, 345, 565, 560))
+croppedIm.save('ATBS/ATBS-17_zophie-cropped.png')
