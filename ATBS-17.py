@@ -34,8 +34,14 @@ catCopyIm.paste(croppedIm, (400, 500))
 # save file
 catCopyIm.save('ATBS/ATBS-17_zophie-pasted.png')
 
+# tile face
+catCopyTwo = catIm.copy()
 catImWidth, catImHeight = catIm.size
 faceImWidth, faceImHeight = croppedIm.size
-catCopyTwo = catIm.copy()
+for left in range(0, catImWidth, faceImHeight):
+    for top in range(0, catImHeight, faceImHeight):
+        print(left,top)
+        catCopyTwo.paste(croppedIm, (left, top))
 
+catCopyTwo.save('ATBS/ATBS-17_zophie-tiled.png')
 
