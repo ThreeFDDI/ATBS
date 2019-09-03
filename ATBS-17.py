@@ -24,3 +24,9 @@ print()
 
 croppedIm = catIm.crop((335, 345, 565, 560))
 croppedIm.save('ATBS/ATBS-17_zophie-cropped.png')
+
+catCopyIm = catIm.copy()
+
+catCopyIm.paste(croppedIm, (0, 0))
+catCopyIm.paste(croppedIm, (400, 500))
+catCopyIm.save('ATBS/ATBS-17_zophie-pasted.png')
