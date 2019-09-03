@@ -4,16 +4,14 @@
 
 # ATBS-16.py 
 
-import email, smtplib, ssl
+import smtplib
 
-smtpObj = smtplib.SMTP("smtp.gmail.com", 587)
+smtpObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
 smtpObj.ehlo()
 
-smtpObj.starttls()
+smtpObj.login('MySMS5858@gmail.com', 'notapassword')
 
-smtpObj.login('MySMS5858', 'notapassword')
+smtpObj.sendmail('MySMS@gmail.com', [ 'myemail@gmail.com'], 'Subject: I <3 Python.')
 
-smtpObj.sendmail('MySMS5858@gmail.com', 'foosyou@gmail.com', 'Subject: So long.')
-
-#smtpObj.quit()
+smtpObj.quit()
