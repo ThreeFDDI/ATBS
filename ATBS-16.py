@@ -10,8 +10,8 @@ smtpObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
 smtpObj.ehlo()
 
-smtpObj.login('MySMS5858@gmail.com', 'notapassword')
+smtpObj.login('MyEmail@gmail.com', 'notapassword')
 
-smtpObj.sendmail('MySMS@gmail.com', [ 'myemail@gmail.com'], 'Subject: I <3 Python.')
+smtpObj.sendmail('MyEmail@gmail.com', [ 'YourEmail@gmail.com'], 'Subject: I <3 Python.')
 
 smtpObj.quit()
