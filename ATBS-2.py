@@ -7,5 +7,6 @@ while name != "your name":
     print("Please type your name.")
     name = input()
     if name == "exit":
-        sys.exit()
+        sys.exit("HALT!!!")
 print("Thank you!!")
+
