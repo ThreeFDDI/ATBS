@@ -8,7 +8,7 @@ def collatz(num):
     print(num)
     return num
 
-num = input("Please pick a number to run the Collatz swquence against:\n")
+num = input("Please pick a number to run the Collatz sequence against:\n")
 
 try:
     num = int(num)

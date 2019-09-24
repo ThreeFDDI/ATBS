@@ -1,11 +1,17 @@
 #!/usr/local/bin/python3
 
-#import random
-#num = random.randint(1,199)
+import random
 
-num = 7
+num = random.randint(1,199)
 
-def plusOne(number):
-    return number + 1
+#num = 7
 
-print("\n" + str(num) + " plusOne = " + str(plusOne(num)))
+def plusOne(number=4, other="test"):
+    num = number + 1
+    return num
+
+new_num = plusOne(other="one",number=num)
+
+print(new_num)
+
+#print("\n" + str(num) + " plusOne = " + str(plusOne(num)))
