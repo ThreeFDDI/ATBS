@@ -30,6 +30,9 @@ response.raise_for_status()
 # convert response to json
 weather = json.loads(response.text)
 
+# demo API
+print(weather)
+
 #convert temp from Kelvin to Fahrenheit
 temp = round(1.8 * ((weather['main']['temp']) - 273) + 32,1)
 
