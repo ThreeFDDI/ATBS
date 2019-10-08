@@ -48,6 +48,10 @@ def makeMove(theBoard, player):
 # alternate between players until there is a winner
 while winner == False:
     winner = makeMove(theBoard, "X")
+
+    # ipdb demo
+    import ipdb; ipdb.set_trace()
+    
     if winner == True:
             break
     else:
